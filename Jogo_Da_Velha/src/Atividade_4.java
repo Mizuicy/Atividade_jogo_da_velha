@@ -1,16 +1,14 @@
 import java.util.Scanner;
 public class Atividade_4 {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
         int quantidade = 3;
         int nub [] = new int[quantidade];
-        int i;
 
         int menor = 0;
         int maior = 0;
 
-        for (i = 0; i < quantidade; i++) {
+        for (int i = 0; i < quantidade; i++) {
             System.out.printf("informe o %2d valor: \n", (i + 1));
             nub[i] = scanner.nextInt();
             if (i == 0) {
