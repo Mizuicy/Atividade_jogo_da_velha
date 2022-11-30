@@ -1,16 +1,31 @@
-import java.util.Arrays;
-
+import java.util.Scanner;
 public class Atividade_4 {
     public static void main(String[] args) {
-        int[] valores = {3, 100, 83, 35, 0, 9, 1, 92,60};
-        int maior = valores[0];
-        int menor = valores[0];
 
-        for (int num : valores) {
-            maior = Math.max(num, maior);
-            menor = Math.min(num, menor);
+        Scanner scanner = new Scanner(System.in);
+        int quantidade = 3;
+        int nub [] = new int[quantidade];
+        int i;
+
+        int menor = 0;
+        int maior = 0;
+
+        for (i = 0; i < quantidade; i++) {
+            System.out.printf("informe o %2d valor: \n", (i + 1));
+            nub[i] = scanner.nextInt();
+            if (i == 0) {
+                menor = nub[i];
+                maior = nub[i];
+            } else {
+                if (nub[i] < menor)
+                    menor = nub[i];
+
+                if (nub[i] > maior)
+                    maior = nub[i];
+            }
         }
-        System.out.println("Numeros de entrada: "+Arrays.toString(valores));
-        System.out.printf("O MENOR número: %d e o MAIOR número: %d",menor,maior);
+        System.out.println("o menor numero " + menor);
+
+        System.out.println("O maior numero " + maior);
     }
 }
